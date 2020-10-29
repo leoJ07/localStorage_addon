@@ -127,7 +127,7 @@ Lc_add.prototype = {
   loadData: function(){
     console.log("loading data...")
     var obj = localStorage.getItem(`lc_${this.name}`);
-    if(obj !== undefind){
+    if(obj !== "undefind"){
       this.storage = JSON.parse(obj);
     }
     console.log("Done!")
