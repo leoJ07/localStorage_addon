@@ -7,21 +7,21 @@ How to get it instald?
   var lc = new Lc_add(name, setings);
   The script tackes som parameters: 
   name: The name of the storage you want to create or load
-  setings: Nead to be an object with the seting autoSave(saves automaticy when you change the storage) like this: 
-    {
-      autoSave: true/false,
-    }
+  setings: Nead to be an object with the seting autoSave(saves automaticy when you change the storage) like this: <br>
+    {<br>
+      autoSave: true/false,<br>
+    }<br><br>
 
-Now you are good to go and use the functions that is able to use: 
-  setItem(path, data): sets an item to som data, 
-    path: That you whuld write after lc.storage as an regalur object,
-    data: What you want to set it to,
-  removeItem(path): remowes an item completly, 
-    path: That you whuld write after lc.storage as an regalur object,
-  getItem(path): gets an item from the storage, 
-    path: That you whuld write after lc.storage as an regalur object,
-  saveData(): saves all data to localStorage,
-  loadData(): loads data from localStorage,
+Now you are good to go and use the functions that is able to use: <br>
+  setItem(path, data): sets an item to som data, <br>
+    path: That you whuld write after lc.storage as an regalur object,<br>
+    data: What you want to set it to,<br>
+  removeItem(path): remowes an item completly, <br>
+    path: That you whuld write after lc.storage as an regalur object,<br>
+  getItem(path): gets an item from the storage, <br>
+    path: That you whuld write after lc.storage as an regalur object,<br>
+  saveData(): saves all data to localStorage,<br>
+  loadData(): loads data from localStorage,<br><br>
   
-you can also axes your data in the storage property ike this: 
+you can also axes your data in the storage property ike this: <br>
   lc.storage.the path you want to get/set(obs: the data dosent save automaticly if you add or remove somfing using this method)
