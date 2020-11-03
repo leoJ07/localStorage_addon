@@ -21,7 +21,8 @@ Now you are good to go and use the functions that is able to use: <br>
   getItem(path): gets an item from the storage, <br>
     path: That you whuld write after lc.storage as an regalur object,<br>
   saveData(): saves all data to localStorage,<br>
-  loadData(): loads data from localStorage,<br><br>
+  loadData(): loads data from localStorage,<br>
+  delete(): deletes the data from lockalStorage and you cant use the varible to access loocalStorage<br><br>
   
 you can also axes your data in the storage property ike this: <br>
   lc.storage.the path you want to get/set(obs: the data dosent save automaticly if you add or remove somfing using this method)
