@@ -24,5 +24,5 @@ Now you are good to go and use the functions that is able to use: <br>
   loadData(): loads data from localStorage,<br>
   delete(): deletes the data from lockalStorage and you cant use the varible to access loocalStorage<br><br>
   
-you can also axes your data in the storage property ike this: <br>
+you can also axes your data in the storage property like this: <br>
 &nbsp;&nbsp;lc.storage.the path you want to get/set data(obs: the data dosent save automaticly if you add or remove somfing using this method)
