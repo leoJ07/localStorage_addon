@@ -127,9 +127,18 @@ Lc_add.prototype = {
   loadData: function(){
     console.log("loading data...")
     var obj = localStorage.getItem(`lc_${this.name}`);
-    if(obj !== undefined){
+    console.log(obj)
+    if(obj !== null){
       this.storage = JSON.parse(obj);
     }
     console.log("Done!")
+  },
+  delete: function(){
+    console.log("deleting storage...");
+    delete localStorage[`lc_${this.name}`]
+    delete this.name;
+    delete this.storage;
+    delete this.setings;
+    console.log("done! you can now longer use this varible to axes your storage.");
   },
 };
