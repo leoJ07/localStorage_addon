@@ -14,7 +14,7 @@ How to get it instald?
 
 Now you are good to go and use the functions that is able to use: <br>
   setItem(path, data): sets an item to som data, <br>
-    path: That you whuld write after lc.storage as an regalur object,<br>
+  &nbsp;&nbsp;path: That you whuld write after lc.storage as an regalur object,<br>
     data: What you want to set it to,<br>
   removeItem(path): remowes an item completly, <br>
     path: That you whuld write after lc.storage as an regalur object,<br>
