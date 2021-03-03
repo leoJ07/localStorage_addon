@@ -1,8 +1,8 @@
 # localStorage_addon
 This addon alows you to save anyfing(including objects) in localstorage. 
 
-How to get it instald?
-1. Add https://leoj07.github.io/localStorage_addon/main.js to your webpage to anable it. 
+How to get it installed?
+1. Add https://leoj07.github.io/localStorage_addon/main.js to your webpage to enable it. 
 2. Make an new storage or load an existing storage by using this script: 
   var lc = new Lc_add(name, setings);
   The script tackes som parameters: 
