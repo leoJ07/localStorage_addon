@@ -1,7 +1,6 @@
 function Lc_add(name, setings = {autoSave: true, autoLoad: true}){
   this.name = name;
   this.setings = setings;
-  this.storage = {};
   this.loadData();
 }
 
@@ -130,7 +129,9 @@ Lc_add.prototype = {
     console.log(obj)
     if(obj !== null){
       this.storage = JSON.parse(obj);
-    }
+    } else {
+      this.storage = {};
+      this.saveData();
     console.log("Done!")
   },
   delete: function(){
