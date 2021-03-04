@@ -151,6 +151,7 @@ Lc_add.prototype = {
   },
   setUpdateCalback: function(calback){
     this.calbacks.update = calback;
+    this.prev_storage = {...this.storage}
     loop(this);
   },
 };
