@@ -132,6 +132,7 @@ Lc_add.prototype = {
     } else {
       this.storage = {};
       this.saveData();
+    }
     console.log("Done!")
   },
   delete: function(){
