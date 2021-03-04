@@ -124,22 +124,17 @@ Lc_add.prototype = {
     }
   },
   saveData: function(){
-    console.log("saving data...");
     var obj = JSON.stringify(this.storage)
     localStorage.setItem(`lc_${this.name}`, obj);
-    console.log("Done!");
   },
   loadData: function(){
-    console.log("loading data...")
     var obj = localStorage.getItem(`lc_${this.name}`);
-    console.log(obj)
     if(obj !== null){
       this.storage = JSON.parse(obj);
     } else {
       this.storage = {};
       this.saveData();
     }
-    console.log("Done!")
   },
   delete: function(){
     console.log("deleting storage...");
@@ -157,9 +152,11 @@ Lc_add.prototype = {
 };
 
 function loop(obj){
+  obj.loadData()
   if(!isEquivalent(obj.storage, obj.prev_storage)){
     obj.calbacks.update();
   }
+  obj.saveData();
   obj.prev_storage = {...obj.storage};
   requestAnimationFrame(() => {
     loop(obj);
