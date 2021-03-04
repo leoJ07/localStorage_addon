@@ -1,6 +1,12 @@
 function Lc_add(name, setings = {autoSave: true, autoLoad: true}){
   this.name = name;
   this.setings = setings;
+  this.calbacks = {
+    update: function(){
+
+    },
+  }
+  this.prev_storage = {};
   this.loadData();
 }
 
@@ -143,4 +149,44 @@ Lc_add.prototype = {
     delete this.setings;
     console.log("done! you can now longer use this varible to axes your storage.");
   },
+  setUpdateCalback: function(calback){
+    this.calbacks.update = calback;
+    loop(this);
+  },
 };
+
+function loop(obj){
+  if(!isEquivalent(obj.storage, obj.prev_storage)){
+    obj.calbacks.update();
+  }
+  obj.prev_storage = {...obj.storage};
+  requestAnimationFrame(() => {
+    loop(obj);
+  });
+}
+
+function isEquivalent(a, b) {
+    // Create arrays of property names
+    var aProps = Object.getOwnPropertyNames(a);
+    var bProps = Object.getOwnPropertyNames(b);
+
+    // If number of properties is different,
+    // objects are not equivalent
+    if (aProps.length != bProps.length) {
+        return false;
+    }
+
+    for (var i = 0; i < aProps.length; i++) {
+        var propName = aProps[i];
+
+        // If values of same property are not equal,
+        // objects are not equivalent
+        if (a[propName] !== b[propName]) {
+            return false;
+        }
+    }
+
+    // If we made it this far, objects
+    // are considered equivalent
+    return true;
+}
